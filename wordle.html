@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>wordle</title>
+    <style> 
+        input{font-size: 3.5vw;text-align: center;text-transform: uppercase;}
+        li{text-transform: uppercase;}
+        .flipGreen{background-color: green;transition: 0.3s;}
+        .flipYellow{background-color: rgb(189, 189, 7);transition: 0.3s;}
+        .flipGrey{background-color: grey;transition: 0.3s;}
+        .wrong{animation: wrong 0.5s;}
+        @keyframes wrong{
+            0%,100%{margin-left: 36%;}
+            25%{margin-left: 34%;}
+            50%{margin-left: 38%;}
+        }
+    </style>
+</head>
+<body>
+    <div id="body">
+        <div id="container">
+            <!--container of all 30 input boxes created using javascript-->
+        </div>
+        <div id="containerTwo">
+            <h1 id="warn"><!--in case where the word typed isn't in word list, then this is where you warn hte user--></h1>
+            <div id="letterColors">
+                <ul id="ul">
+                    <!--shows which letters are correct and which ones arent-->
+                </ul>
+            </div>
+        </div>
+    </div>
+<script src="wordle.js"></script>
+</body>
+</html>
